@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EstudaFácil! - Todas as Telas</title>
+
+    <style>
+        body {
+            background-color: #cccccc;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .tela {
+            background-color: #003377;
+            width: 320px;
+            min-height: 520px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 3px solid white;
+        }
+
+        .foto-grande {
+            width: 100px;
+            height: 100px;
+            background-color: #88c057;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin: auto;
+            overflow: hidden
+        }
+        
+        .foto-pequena {
+            width: 70px;
+            height: 70px;
+            background-color: #88c057;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        
+        input, select {
+            background-color: #444444;
+            color: white;
+            border: none;
+            padding: 8px;
+            width: 80%;
+        }
+        
+        .botao {
+            display: inline-block;
+            background-color: #1a75ff;
+            color: white;
+            width: 110px;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        .link-simples {
+            color: #add8e6;
+            font-size: 14px;
+        }
+
+        .campo-esquerda {
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        .campo-esquerda input, .campo-esquerda select {
+            width: 60%;
+        }
+
+        table {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .caixa-calendario {
+            border: 4px solid white;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .lista-materias {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .lista-materias a {
+            display: block;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="tela1" class="tela">
+        <h2>EstudaFácil!</h2>
+        
+        <div class="foto-grande">
+        <img src="https://i.ibb.co/HpxRZR3N/f065d5c8-estudante-com-notebook-fone-de-ouvindo-estudar-online-1.jpg" alt="f065d5c8-estudante-com-notebook-fone-de-ouvindo-estudar-online-1" border="0"></img>
+        </div>
+        <p>
+
+        <form>
+            <label>login</label><br>
+            <input type="text" name="login" required>
+            <p>
+
+            <label>senha</label><br>
+            <input type="password" name="senha" maxlength="6" required>
+            <p>
+
+            <input type="submit" href="#tela3" class="botao"></input>
+            <p><br>
+
+            <a href="#tela2" class="link-simples">crie login</a><br><br>
+            <a href="#tela1" class="link-simples">esqueci minha senha</a>
+        </form>
+    </div>
+
+    <div id="tela2" class="tela">
+        <div class="foto-grande"></div>
+        <p><br>
+
+        <form>
+            <div class="campo-esquerda">
+                <label>nome:</label>
+                <input type="text" name="nome">
+            </div>
+
+            <div class="campo-esquerda">
+                <label>idade:</label>
+                <input type="number" name="idade">
+            </div>
+
+            <div class="campo-esquerda"required>
+                <label>email:</label>
+                <input type="email" name="email"required>
+            </div>
+
+            <div class="campo-esquerda">
+                <label>escolaridade:</label>
+                <select name="escolaridade">
+                    <option>Fundamental</option>
+                    <option>Médio</option>
+                    <option>Superior</option>
+                </select>
+            </div>
+            <p><br>
+            
+            <input type="reset" value="limpar" class="botao">
+            
+            <input type="submit" href="#tela3" class="botao"></a>
+        </form>
+    </div>
+
+    <div id="tela3" class="tela">
+        
+        <table>
+            <tr>
+                <td><div class="foto-pequena"></div></td>
+                <td>
+                    <strong>nome de usuario</strong><br>
+                    email
+                </td>
+            </tr>
+        </table>
+
+        <h3 style="text-align: left;">calendário</h3>
+        
+        <div class="caixa-calendario">
+            <p>Selecione a data:</p>
+            <input type="date" name="data">
+        </div>
+        
+        <p>
+            <strong>(vai ficar organizado em baixo e quando estiver perto da data o app envia uma mensagem)</strong>
+        </p>
+        <p><br>
+
+        <a href="#tela4" class="botao" style="width: 80%;">Ir para Matérias &rarr;</a>
+    </div>
+
+    <div id="tela4" class="tela"> 
+        
+        <table>
+            <tr>
+                <td><div class="foto-pequena"></div></td>
+                <td>
+                    <strong>nome de usuario</strong><br>
+                    email
+                </td>
+            </tr>
+        </table>
+
+        <h3 style="text-align: left;">Matérias</h3>
+        <br>
+
+        <div class="lista-materias">
+            <a href="#tela4">Química</a>
+            <a href="#tela4">Matematica</a>
+            <a href="#tela4">Física</a>
+            <a href="#tela4">ETC...</a>
+        </div>
+
+        <br><br>
+        
+        <a href="#tela3" class="link-simples">&larr; Voltar ao Calendário</a> | 
+        <a href="#tela1" class="link-simples">Sair</a>
+    </div>
+
+</body>
+</html>
